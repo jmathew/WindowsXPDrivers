@@ -36,20 +36,20 @@ C:\WinDDK\7600.16385.1\Debuggers\windbg.exe -b -k com:pipe,port=\\.\pipe\com_1,r
 
  * Windows XP with debugging enabled 
   * Modify *boot.ini*:
-```
-[boot loader]  
-
-timeout=30  
-
-default=multi(0)disk(0)rdisk(0)partition(1)\WINDOWS  
-
-[operating systems]  
-
-multi(0)disk(0)rdisk(0)partition(1)\WINDOWS="Microsoft Windows XP Professional" /noexecute=optin /fastdetect  
-
-multi(0)disk(0)rdisk(0)partition(1)\WINDOWS="Microsoft Windows XP Professional - DEBUG" /noexecute=optin /fastdetect /debug /debugport=com1 /baudrate=115200   
-
-```
+    ```
+    [boot loader]  
+    
+    timeout=30  
+    
+    default=multi(0)disk(0)rdisk(0)partition(1)\WINDOWS  
+    
+    [operating systems]  
+    
+    multi(0)disk(0)rdisk(0)partition(1)\WINDOWS="Microsoft Windows XP Professional" /noexecute=optin /fastdetect  
+    
+    multi(0)disk(0)rdisk(0)partition(1)\WINDOWS="Microsoft Windows XP Professional - DEBUG" /noexecute=optin /fastdetect /debug /debugport=com1 /baudrate=115200   
+    
+    ```
 
 
 ### **Build**
