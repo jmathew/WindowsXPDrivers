@@ -23,10 +23,10 @@ These are a series of simple Windows XP drivers that culminates with a driver th
   * demonstrates use of IOCTLs to communicate between user mode and kernel mode
 
 
-## **Setup Environment**
+### **Setup Environment**
 
  * Windows Driver Kit, the tool used to build the driver can be accessed by:
-  * Start - Windows Driver Kits - WDK **install version** - Build Environments - Windows XP
+  * Start - Windows Driver Kits - **WDK install version** - Build Environments - Windows XP
 
  * WinDbg
   * Create a shortcut with the following target:
@@ -37,16 +37,16 @@ C:\WinDDK\7600.16385.1\Debuggers\windbg.exe -b -k com:pipe,port=\\.\pipe\com_1,r
  * Windows XP with debugging enabled 
   * Modify *boot.ini*:
 ```
-[boot loader]
-timeout=30
-default=multi(0)disk(0)rdisk(0)partition(1)\WINDOWS
-[operating systems]
-multi(0)disk(0)rdisk(0)partition(1)\WINDOWS="Microsoft Windows XP Professional" /noexecute=optin /fastdetect
-multi(0)disk(0)rdisk(0)partition(1)\WINDOWS="Microsoft Windows XP Professional - DEBUG" /noexecute=optin /fastdetect /debug /debugport=com1 /baudrate=115200
+[boot loader]  return
+timeout=30  return
+default=multi(0)disk(0)rdisk(0)partition(1)\WINDOWS  return
+[operating systems]  return
+multi(0)disk(0)rdisk(0)partition(1)\WINDOWS="Microsoft Windows XP Professional" /noexecute=optin /fastdetect  return
+multi(0)disk(0)rdisk(0)partition(1)\WINDOWS="Microsoft Windows XP Professional - DEBUG" /noexecute=optin /fastdetect /debug /debugport=com1 /baudrate=115200  return
 ```
 
 
-## **Build**
+### **Build**
 
  * Startup the (x86) Checked Build Environment
  * Navigate to the source directory
